@@ -1,29 +1,32 @@
-import { GithubLogoIcon, InstagramLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
+import { GithubLogoIcon, InstagramLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react'
 
 function Footer() {
-    let data = new Date().getFullYear();
+
+    let data = new Date().getFullYear()
 
     return (
-        <div className="bg-blue-600 text-white py-4 flex justify-center items-center">
-            <div className="container flex flex-col items-center">
-                <p className='text-xl font-bold'>
-                    Projeto Farmacia | Copyright: {data}
-                </p>
-                <p className='text-lg mt-2 mb-2'>Acesse minhas redes sociais</p>
-                <div className='flex gap-4'>
-                    <a href="https://www.linkedin.com/in/vitor-nazareth/" target="_blank" rel="noopener noreferrer">
+        <>
+          <div className="flex justify-center bg-blue-400 text-white">
+                <div className="container flex flex-col items-center py-4">
+                    <p className='text-xl font-bold'>
+                            Projeto Farmacia | Copyright: {data}
+                        </p>
+                    <p className='text-lg'>Acesse minhas redes sociais</p>
+                    <div className='flex gap-2 '>
+                        <a href="https://www.linkedin.com/in/vitor-nazareth/" target="_blank">
                         <LinkedinLogoIcon size={48} weight='bold' />
-                    </a>
-                    <a href="https://www.instagram.com/vitorzath?igsh=MTFoYnl3ZjcyMmFoMg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                        </a>
+                        <a href="https://www.instagram.com/vitorzath?igsh=MTFoYnl3ZjcyMmFoMg%3D%3D&utm_source=qr" target="_blank">
                         <InstagramLogoIcon size={48} weight='bold' />
-                    </a>
-                    <a href="https://github.com/aioryu" target="_blank" rel="noopener noreferrer">
+                        </a>
+                        <a href="https://github.com/aioryu" target="_blank">
                         <GithubLogoIcon size={48} weight='bold' />
-                    </a>
+                        </a>
+                        </div>
                 </div>
             </div>
-        </div>
-    );
+        </>
+    )
 }
 
-export default Footer;
+export default Footer
