@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import type Categoria from "../../../models/Categoria";
-import { buscar } from "../../../services/Service";
 import CardCategorias from "../cardcategorias/CardCategorias";
-
+import { buscarCategorias } from "../../../services/Service";
+// Adjust the import path as needed
 
 function ListaCategorias() {
 
     const [categorias, setCategorias] = useState<Categoria[]>([])
 
-    async function buscarCategorias() {
-        await buscar ('/categorias', setCategorias)
+    async function carregarCategorias() {
+        await buscarCategorias('/categoria', setCategorias)
     }
 
     useEffect(() => {
-        buscarCategorias()
+        carregarCategorias()
     }, [])
 
     return (
