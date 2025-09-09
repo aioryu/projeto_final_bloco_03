@@ -1,6 +1,6 @@
 export default interface Categoria {
   id: number;
-  nome: string;
+ // nome: string;
   descricao: string;
-  produto?: null;
+ // produto?: null;
 }
